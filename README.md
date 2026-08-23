@@ -45,6 +45,7 @@ A normal lookup is a forward lookup:
 
 ```text
 domain → IP address
+
 For example:
 
 example.com → 93.184.216.x
