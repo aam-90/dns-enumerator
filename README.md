@@ -66,6 +66,7 @@ dns-enumerator/
 ├── README.md
 └── .gitignore
 
+```md
 ## Installation
 
 Clone the repository:
