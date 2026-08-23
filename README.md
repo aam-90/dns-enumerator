@@ -1,27 +1,19 @@
 # DNS Enumerator
 
-A simple Python DNS enumeration and analysis tool built with dnspython.
+A Python-based DNS enumeration and analysis tool built with
+[dnspython](https://www.dnspython.org/).
 
 ## Features
 
-- A record lookup
-- AAAA record lookup
-- NS record lookup
-- CNAME record lookup
-- MX record lookup
-- PTR record lookup
-- SOA record lookup
-- TXT record lookup
-- TTL information
-- Reverse DNS lookup
-- Command-line options
+- Query common DNS record types
+- Display record TTL values
+- Reverse DNS lookups
+- Configurable DNS resolver
 - JSON output
-- DNS timeout and error handling
-
-## Requirements
-
-- Python 3
-- dnspython
+- Input validation
+- DNS error handling
+- Unit tests
+- Logging
 
 ## Installation
 
