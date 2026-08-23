@@ -44,27 +44,6 @@ format.
 ---
 
 
-Project Structure:
-```text
-dns-enumerator/
-│
-├── .github/
-│   └── workflows/
-│       └── tests.yml
-│
-├── dnsenum/
-│   ├── __init__.py
-│   ├── resolver.py
-│   ├── output.py
-│   └── validation.py
-│
-├── tests/
-│   └── test_dnsenum.py
-│
-├── demodns.py
-├── requirements.txt
-├── README.md
-└── .gitignore
 
 ```md
 ## Installation
