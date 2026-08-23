@@ -45,7 +45,7 @@ format.
 
 
 
-```md
+
 ## Installation
 
 Clone the repository:
