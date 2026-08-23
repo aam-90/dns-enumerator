@@ -45,6 +45,7 @@ format.
 
 
 Project Structure:
+```text
 dns-enumerator/
 │
 ├── .github/
