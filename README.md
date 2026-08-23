@@ -1,85 +1,131 @@
 # DNS Enumerator
 
-A Python-based DNS enumeration and analysis tool built with
-[dnspython](https://www.dnspython.org/).
+A Python-based DNS enumeration and analysis tool built with `dnspython`.
+
+The tool performs DNS record lookups, reverse DNS lookups, displays TTL
+information, supports custom DNS resolvers, and can output results in JSON
+format.
+
+> **Note:** This project was built for learning, system administration, and
+> authorized security testing.
+
+---
 
 ## Features
 
 - Query common DNS record types
-- Display record TTL values
-- Reverse DNS lookups
-- Configurable DNS resolver
-- JSON output
-- Input validation
-- DNS error handling
-- Unit tests
-- Logging
+- Display DNS record TTL values
+- Perform reverse DNS lookups
+- Use a custom DNS resolver
+- Output results as structured JSON
+- Validate domain and IP address input
+- Handle DNS errors and timeouts
+- Structured logging with verbose output
+- Unit tests using `pytest`
+- Mock DNS responses during testing
+- GitHub Actions CI for automated tests
 
-## What I Learned About DNS
+---
 
-While building this project, I learned how DNS translates human-readable
-domain names into information used by networked systems.
+## Supported DNS Record Types
 
-### DNS Record Types
+| Record Type | Description |
+|---|---|
+| `A` | Maps a domain name to an IPv4 address |
+| `AAAA` | Maps a domain name to an IPv6 address |
+| `NS` | Identifies authoritative nameservers |
+| `CNAME` | Creates an alias from one domain name to another |
+| `MX` | Specifies mail servers for a domain |
+| `PTR` | Maps an IP address to a hostname |
+| `SOA` | Contains administrative information about a DNS zone |
+| `TXT` | Stores text data such as verification and email policies |
 
-- **A** — Maps a domain name to an IPv4 address.
-- **AAAA** — Maps a domain name to an IPv6 address.
-- **NS** — Identifies the authoritative nameservers for a domain.
-- **CNAME** — Creates an alias from one domain name to another.
-- **MX** — Specifies mail servers responsible for receiving email.
-- **PTR** — Performs reverse DNS mapping from an IP address to a hostname.
-- **SOA** — Contains administrative information about a DNS zone.
-- **TXT** — Stores text data associated with a domain, commonly used for
-  verification and email-related policies.
+---
 
-### TTL
+# What I Learned About DNS
 
-DNS records have a **Time To Live (TTL)** value. It indicates how long a
-DNS response may be cached before it should be queried again.
+## DNS Resolution
 
-This project displays the TTL for records returned by the resolver.
+DNS translates human-readable domain names into information used by
+networked systems.
 
-### Forward and Reverse DNS
-
-A normal lookup is a forward lookup:
+For example:
 
 ```text
-domain → IP address
+example.com
+    ↓
+DNS Resolver
+    ↓
+DNS Servers
+    ↓
+93.184.216.x
 
-For example:
+A DNS resolver receives a query and obtains DNS information from the
+appropriate DNS servers.
 
-example.com → 93.184.216.x
+By default, this project uses the system-configured DNS resolver. A custom
+DNS server can also be specified with the --server option.
 
-A reverse lookup works in the opposite direction:
+TTL
 
-IP address → hostname
+DNS records have a Time To Live (TTL) value.
 
-This project supports reverse lookups using PTR records.
-DNS Resolvers
+TTL indicates how long a DNS response may be cached before it should
+normally be queried again.
 
-A DNS resolver receives DNS queries and obtains answers from DNS servers.
+For example:   93.184.216.34  (TTL: 300)
+This project displays the TTL for DNS records returned by the resolver.
 
-This project normally uses the system-configured resolver, but it can also
-use a user-selected DNS server with the --server option.
+Forward and Reverse DNS
 
-For example:
+Forward Lookup
+A normal DNS lookup is a forward lookup: Domain Name → IP Address
 
-python demodns.py example.com --server 8.8.8.8
+Reverse Lookup
+A reverse DNS lookup works in the opposite direction:IP Address → Hostname
+
+This project performs reverse DNS lookups using PTR records.
+
 What This Project Taught Me
 
-Building this project helped me understand:
+Building this project helped me learn about:
 
 DNS record types and their purposes
 Forward and reverse DNS lookups
 DNS TTL and caching
 DNS resolver behavior
-Handling DNS timeouts and errors
+DNS timeouts and error handling
+Python exception handling
 Mocking DNS responses in unit tests
+Writing tests with pytest
 Separating application logic into modules
-Command-line argument handling
+Command-line argument handling with argparse
 Structured JSON output
-Logging and input validation
+Logging in Python
+Input validation
+Git and GitHub workflows
+Continuous integration with GitHub Actions
 
+Project Structure:
+dns-enumerator/
+│
+├── .github/
+│   └── workflows/
+│       └── tests.yml
+│
+├── dnsenum/
+│   ├── __init__.py
+│   ├── resolver.py
+│   ├── output.py
+│   └── validation.py
+│
+├── tests/
+│   └── test_dnsenum.py
+│
+├── demodns.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 
 ## Installation
 
