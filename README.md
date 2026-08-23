@@ -1,3 +1,4 @@
+
 # DNS Enumerator
 
 A Python-based DNS enumeration and analysis tool built with `dnspython`.
@@ -42,69 +43,6 @@ format.
 
 ---
 
-# What I Learned About DNS
-
-## DNS Resolution
-
-DNS translates human-readable domain names into information used by
-networked systems.
-
-For example:
-
-```text
-example.com
-    ↓
-DNS Resolver
-    ↓
-DNS Servers
-    ↓
-93.184.216.x
-
-A DNS resolver receives a query and obtains DNS information from the
-appropriate DNS servers.
-
-By default, this project uses the system-configured DNS resolver. A custom
-DNS server can also be specified with the --server option.
-
-TTL
-
-DNS records have a Time To Live (TTL) value.
-
-TTL indicates how long a DNS response may be cached before it should
-normally be queried again.
-
-For example:   93.184.216.34  (TTL: 300)
-This project displays the TTL for DNS records returned by the resolver.
-
-Forward and Reverse DNS
-
-Forward Lookup
-A normal DNS lookup is a forward lookup: Domain Name → IP Address
-
-Reverse Lookup
-A reverse DNS lookup works in the opposite direction:IP Address → Hostname
-
-This project performs reverse DNS lookups using PTR records.
-
-What This Project Taught Me
-
-Building this project helped me learn about:
-
-DNS record types and their purposes
-Forward and reverse DNS lookups
-DNS TTL and caching
-DNS resolver behavior
-DNS timeouts and error handling
-Python exception handling
-Mocking DNS responses in unit tests
-Writing tests with pytest
-Separating application logic into modules
-Command-line argument handling with argparse
-Structured JSON output
-Logging in Python
-Input validation
-Git and GitHub workflows
-Continuous integration with GitHub Actions
 
 Project Structure:
 dns-enumerator/
