@@ -58,12 +58,8 @@ DNS Response / Error Handling
 Formatted Terminal or JSON Output
 
 
-### What each main function does
-
-You can also add this if you want a slightly more technical README:
-
-
-### Core Functionality
+## What each main function does
+## Core Functionality
 
 - `resolve_records()` — Queries DNS record types such as `A`, `MX`, `NS`, and `TXT`.
 - `reverse_lookup()` — Performs reverse DNS lookups using `PTR` records.
@@ -71,9 +67,3 @@ You can also add this if you want a slightly more technical README:
 - `format_json()` — Converts DNS lookup results into structured JSON.
 - `format_reverse_json()` — Formats reverse DNS results as JSON.
 
-## Installation
-
-Clone the repository:
-
-
-git clone https://github.com/aam-90/dns-enumerator.git
