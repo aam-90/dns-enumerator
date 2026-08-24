@@ -62,7 +62,7 @@ Formatted Terminal or JSON Output
 
 You can also add this if you want a slightly more technical README:
 
-```md
+
 ### Core Functionality
 
 - `resolve_records()` — Queries DNS record types such as `A`, `MX`, `NS`, and `TXT`.
@@ -75,5 +75,5 @@ You can also add this if you want a slightly more technical README:
 
 Clone the repository:
 
-```bash
+
 git clone https://github.com/aam-90/dns-enumerator.git
