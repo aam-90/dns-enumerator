@@ -56,10 +56,12 @@ DNS Resolver
 DNS Response / Error Handling
     ↓
 Formatted Terminal or JSON Output
+
+
 ---
 
-## What each main function does
-## Core Functionality
+What each main function does
+ 
 
 - `resolve_records()` — Queries DNS record types such as `A`, `MX`, `NS`, and `TXT`.
 - `reverse_lookup()` — Performs reverse DNS lookups using `PTR` records.
@@ -67,3 +69,4 @@ Formatted Terminal or JSON Output
 - `format_json()` — Converts DNS lookup results into structured JSON.
 - `format_reverse_json()` — Formats reverse DNS results as JSON.
 
+---
