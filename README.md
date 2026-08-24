@@ -42,9 +42,34 @@ format.
 | `TXT` | Stores text data such as verification and email policies |
 
 ---
+## Program Flow
+
+```text
+User Input
+    ↓
+Input Validation
+    ↓
+CLI Options
+    ↓
+DNS Resolver
+    ↓
+DNS Response / Error Handling
+    ↓
+Formatted Terminal or JSON Output
 
 
+### What each main function does
 
+You can also add this if you want a slightly more technical README:
+
+```md
+### Core Functionality
+
+- `resolve_records()` — Queries DNS record types such as `A`, `MX`, `NS`, and `TXT`.
+- `reverse_lookup()` — Performs reverse DNS lookups using `PTR` records.
+- `is_valid_domain()` — Checks whether the supplied domain name is valid.
+- `format_json()` — Converts DNS lookup results into structured JSON.
+- `format_reverse_json()` — Formats reverse DNS results as JSON.
 
 ## Installation
 
