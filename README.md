@@ -56,7 +56,7 @@ DNS Resolver
 DNS Response / Error Handling
     ↓
 Formatted Terminal or JSON Output
-
+---
 
 ## What each main function does
 ## Core Functionality
